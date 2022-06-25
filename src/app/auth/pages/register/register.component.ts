@@ -34,7 +34,6 @@ export class RegisterComponent implements OnInit {
     const { name, email, password } = this.myForm.value;
     this.authService.register( name, email, password )
       .subscribe( ok  => {
-        console.log( ok );
         if( ok === true ){
           this.router.navigateByUrl( '/dashboard');
         } else {
